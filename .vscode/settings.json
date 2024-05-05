@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "sumArray.C": "cpp"
+        "sumArray.C": "cpp",
+        "minMax.C": "cpp"
     }
 }
