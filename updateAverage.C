@@ -19,17 +19,11 @@ int sumNeighbours(int *ptr, int size){
 int main(){
     int a,b,send;
     float average;
-    int elements[5]={1,4,7,3,2};
     printf("Enter the first number:\n");
     scanf("%d",&a);
     printf("Enter the second number:\n");
     scanf("%d",&b);
     updateAverage(a,b,&average);
-    send = sumNeighbours(elements, 5);
     printf("The average of both numbers is %f\n",average);
-    if(send==1)
-    printf("The sum of the neighbouring elements is good",send);
-    if(send==0)
-    printf("The sum of the neighbouring elements is bad",send);
     return 0;
 }
