@@ -18,20 +18,44 @@ int sumNeighbours(int *ptr, int size)
     return 0;
 }
 
-int sortedOrNot(int *ptr, int size, int *result){
-  *result=1; // Assuming the array is really sorted
-  for(int i=1;i<size;i++){
-    if(ptr[i]<=ptr[i-1])
-    *result=0; // The array is not sorted
-    if(ptr[i]<ptr[i-1])
-    return 0;
-  }
-  return 1;
+int sortedOrNotRecursive(int *ptr, int size, int *result)
+{
+
+    int outcome;
+    if (size == 1)
+    {                // Array has only 1 element
+        *result = 1; // Assuming the array is sorted
+        return 1;
+    }
+    outcome = sortedOrNotRecursive(ptr, size - 1, result);
+    if (outcome != 0 && ptr[size - 1] == ptr[size - 2])
+    { // If the array is really sorted AND last element in the array are equal{
+        *result = 0;
+    }
+    if (outcome != 0 && ptr[size - 1] < ptr[size - 2])
+    { // If the element on the right is less then the element on the left
+        *result = 0;
+        return 0;
+    }
+    return outcome;
+}
+
+int sortedOrNot(int *ptr, int size, int *result)
+{
+    *result = 1; // Assuming the array is really sorted
+    for (int i = 1; i < size; i++)
+    {
+        if (ptr[i] <= ptr[i - 1])
+            *result = 0; // The array is not sorted
+        if (ptr[i] < ptr[i - 1])
+            return 0;
+    }
+    return 1;
 }
 
 int main()
 {
-    int a, b, send,sort,check;
+    int a, b, send, sort, check;
     float average;
     int elements[5] = {1, 4, 7, 3, 2}; // 1,4,1,4,2 for bad if needed,1,4,7,3,2 is the good array, 1,2,3,4,5 to check for the sortedOrNot function
     printf("Enter the first number:\n");
@@ -40,16 +64,15 @@ int main()
     scanf("%d", &b);
     updateAverage(a, b, &average);
     send = sumNeighbours(elements, 5);
-    sort=sortedOrNot(elements,5,&check);
-    if(sort == 0)
-    printf("The array is not sorted!\n",sort);
-    if(sort == 1)
-    printf("The array is sorted!\n",sort);
+    sort = sortedOrNot(elements, 5, &check);
+    if (sort == 0)
+        printf("The array is not sorted!\n", sort);
+    if (sort == 1)
+        printf("The array is sorted!\n", sort);
     printf("The average of both numbers is %f\n", average);
     if (send == 1)
         printf("The sum of the neighbouring elements is good", send);
     if (send == 0)
         printf("The sum of the neighbouring elements is bad", send);
     return 0;
-
 }
