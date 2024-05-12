@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define SIZE 4
+#define SIZE 5
 
 
 void swap(char* ptr1, char* ptr2){
@@ -57,16 +57,35 @@ void reverseArrRecursive(char *arr, int size){
   
 }
 
+int findSecondSmallest(int *arr, int size){
+   int i;
+   int min1=arr[0],min2=arr[0];
+   for(i=1;i<size;i++){
+      if(arr[i]<min1){
+         min2=min1;
+         min1=arr[i];
+      }
+      else if (arr[i]<min2){
+         min2=arr[i];
+      }
+   }
+   return min2;
+}
+
 int main(){
     
-    char arr[SIZE]={'a','f','k','d'};
-    int arr2[SIZE]={1,2,1,3};
+    char arr[SIZE]={'a','f','k','d','g'};
+    int arr2[SIZE]={1,2,1,3,5};
+    int arr3[SIZE]={6,14,8,9,4}; // 5,13,7,4,9
+    int small;
     printf("The array of characters before swapping:\n");
     printArr(arr,SIZE);
     reverseArrRecursive(arr,SIZE);
     printf("The array of characters after swapping:\n");
     printArr(arr,SIZE);
    printValuesFreq(arr2,SIZE);
+   small=findSecondSmallest(arr3,SIZE);
+   printf("The second smallet in the array is %d",small);
     
     return 0;
 }
