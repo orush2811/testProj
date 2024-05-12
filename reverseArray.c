@@ -45,6 +45,7 @@ void printValuesFreq(int *arr, int size){
          if(arr[j]==arr[i])
          countVal++;
       }
+       printf("Value at %d appears %d times!\n",arr,countVal);
    }
 }
 
@@ -53,18 +54,19 @@ void reverseArrRecursive(char *arr, int size){
       swap(&arr[0],&arr[size-1]); // Can also use swap(arr,arr+size-1)
       reverseArrRecursive(arr+1,size-2);
    }
-
+  
 }
 
 int main(){
     
     char arr[SIZE]={'a','f','k','d'};
+    int arr2[SIZE]={1,2,1,3};
     printf("The array of characters before swapping:\n");
     printArr(arr,SIZE);
     reverseArrRecursive(arr,SIZE);
     printf("The array of characters after swapping:\n");
     printArr(arr,SIZE);
-
+   printValuesFreq(arr2,SIZE);
     
     return 0;
 }
