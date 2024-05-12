@@ -5,22 +5,23 @@
 
 int findTwoEleSum(int *arr, int size, int value, int *iPtr, int *jPtr)
 {
-    int i, j;
-    for (i = 0; i < size; i++)
-    {
-        for (j = i + 1; j < size; j++)
-        {
-            if (arr[i] + arr[j] == value)
-            {
-                *iPtr = i;
-                *jPtr=j;
-                return 1;
-            }
-        }
+   int i,j,currentSum=0;
+   i=0,j=size-1;
+   while(i<j){
+    currentSum=arr[i]+arr[j];
+    if(currentSum==value){
+        *iPtr=i;
+        *jPtr=j;
+        return 1;
     }
-    *iPtr=0;
-    *jPtr=0;
-    return 0;
+    else if(currentSum<value)
+    i++;
+    else
+    j--;
+   }
+   *iPtr=0;
+   *jPtr=0;
+   return 0;
 }
 
 int main()
