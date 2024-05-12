@@ -29,5 +29,8 @@ int main()
     int *ptr,*ptr2;
     int arr[SIZE]={1,5,10,19,3,6,8};
     send=findTwoEleSum(arr,SIZE,val,ptr,ptr2);
+    if(send==1)
+    printf("The value of the two elements match!\n");
+    else
     return 0;
 }
