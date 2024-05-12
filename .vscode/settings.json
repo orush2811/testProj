@@ -2,6 +2,7 @@
     "files.associations": {
         "sumArray.C": "cpp",
         "minMax.C": "cpp",
-        "updateAverage.C": "cpp"
+        "updateAverage.C": "cpp",
+        "Challenge #9.C": "cpp"
     }
 }
