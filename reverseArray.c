@@ -24,6 +24,30 @@ void reverseArrIterative(char *arr, int size){
    }
 }
 
+void printValuesFreq(int *arr, int size){
+   int i,j,leftFlag,countVal=0;
+   for(i=0;i<size;i++){
+      countVal=1;
+      leftFlag=0;
+      // For the left part of the array
+      for(j=0;j<i;j++){
+         if(arr[j]==arr[i]){
+            leftFlag=1;
+            break;
+         }
+         
+      }
+      // For the right part of the array
+      if(leftFlag==1){
+         continue;
+      }
+      for(j=i+1;j<size;j++){
+         if(arr[j]==arr[i])
+         countVal++;
+      }
+   }
+}
+
 void reverseArrRecursive(char *arr, int size){
    if(size>1){
       swap(&arr[0],&arr[size-1]); // Can also use swap(arr,arr+size-1)
