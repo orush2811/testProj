@@ -3,6 +3,7 @@
         "sumArray.C": "cpp",
         "minMax.C": "cpp",
         "updateAverage.C": "cpp",
-        "Challenge #9.C": "cpp"
+        "Challenge #9.C": "cpp",
+        "createArrayFunction.C": "cpp"
     }
 }
