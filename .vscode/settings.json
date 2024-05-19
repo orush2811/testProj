@@ -5,6 +5,7 @@
         "updateAverage.C": "cpp",
         "Challenge #9.C": "cpp",
         "createArrayFunction.C": "cpp",
-        "recursivePalindrom.C": "cpp"
+        "recursivePalindrom.C": "cpp",
+        "maxSum.C": "cpp"
     }
 }
