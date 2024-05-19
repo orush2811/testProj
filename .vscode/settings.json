@@ -6,6 +6,7 @@
         "Challenge #9.C": "cpp",
         "createArrayFunction.C": "cpp",
         "recursivePalindrom.C": "cpp",
-        "maxSum.C": "cpp"
+        "maxSum.C": "cpp",
+        "printBothSides.C": "cpp"
     }
 }
