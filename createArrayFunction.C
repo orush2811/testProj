@@ -17,7 +17,7 @@ int main()
 
     int *arr;
     arr = createArray();
-    printArr(arr,SIZE);
+    printArr(arr, SIZE);
 }
 
 int *createArray()

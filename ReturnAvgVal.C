@@ -17,7 +17,7 @@ int main()
 
     double arr[SIZE] = {1, 2, 5, 9, 10, 8, 7, 20};
     double test;
-    test=findArrayAverage(arr,SIZE);
-    printf("The sum of the elements is %lf",test);
+    test = findArrayAverage(arr, SIZE);
+    printf("The sum of the elements is %lf", test);
     return 0;
 }
