@@ -9,6 +9,7 @@
         "maxSum.C": "cpp",
         "printBothSides.C": "cpp",
         "ReturnAvgVal.C": "cpp",
-        "findFloat.C": "cpp"
+        "findFloat.C": "cpp",
+        "printInBinary.C": "cpp"
     }
 }
