@@ -8,6 +8,7 @@
         "recursivePalindrom.C": "cpp",
         "maxSum.C": "cpp",
         "printBothSides.C": "cpp",
-        "ReturnAvgVal.C": "cpp"
+        "ReturnAvgVal.C": "cpp",
+        "findFloat.C": "cpp"
     }
 }
