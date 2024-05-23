@@ -19,9 +19,9 @@ void swapOn(int *arr1, int *arr2)
     }
 }
 
-void swapO1(void **ptr1, void **ptr2)
+void swapO1(int **ptr1, int **ptr2)
 {
-    void *temp;
+    int *temp;
     temp = *ptr1;
     *ptr1 = *ptr2;
     *ptr2 = temp;
@@ -58,7 +58,7 @@ int main()
     scanf("%d", &sizeArr2);
     Arr1 = generateArr(sizeArr1);
     Arr2 = generateArr(sizeArr2);
-    swapO1(&Arr1, &Arr2);
+    swapO1(&Arr1,&Arr2);
     int Array1[SIZE] = {1, 2, 3, 4, 5};
     int Array2[SIZE] = {6, 7, 8, 9, 10};
     printf("The array values before swapping are:\n");
