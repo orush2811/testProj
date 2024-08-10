@@ -10,6 +10,7 @@
         "printBothSides.C": "cpp",
         "ReturnAvgVal.C": "cpp",
         "findFloat.C": "cpp",
-        "printInBinary.C": "cpp"
+        "printInBinary.C": "cpp",
+        "ArrayO(n).C": "cpp"
     }
 }
